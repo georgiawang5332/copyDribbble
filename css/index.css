@@ -1,0 +1,651 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: #fbfbfb;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.wrapper {
+  max-width: 100%;
+  height: 100vh;
+  color: #999;
+}
+
+.wrapper .menu {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  font-size: 25px;
+  color: #fbfbfb;
+  cursor: pointer;
+  display: none;
+}
+
+.wrapper header {
+  width: 100%;
+  float: left;
+  background: #333;
+}
+
+.wrapper header .logo {
+  max-width: 8%;
+  float: left;
+  margin-left: 1%;
+  cursor: pointer;
+}
+
+.wrapper header .logo:hover {
+  opacity: .4;
+}
+
+.wrapper header .logo img {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.wrapper header nav {
+  width: 91%;
+  float: left;
+}
+
+.wrapper header nav ul {
+  width: 100%;
+  float: left;
+  margin: 0 auto;
+  line-height: 50px;
+}
+
+.wrapper header nav ul li {
+  margin-left: 20px;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 14px;
+  float: left;
+}
+
+.wrapper header nav ul li:hover {
+  opacity: 5;
+  color: #fbfbfb;
+}
+
+.wrapper header nav ul li img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 5px;
+}
+
+.wrapper header nav ul li.more {
+  font-size: 0;
+}
+
+.wrapper header nav ul li.more:hover .dot {
+  background-color: #fbfbfb;
+}
+
+.wrapper header nav ul li.more:hover .dot:before, .wrapper header nav ul li.more:hover .dot:after {
+  background-color: #fbfbfb;
+}
+
+.wrapper header nav ul li.more .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #999;
+  position: relative;
+  display: inline-block;
+  top: 3px;
+}
+
+.wrapper header nav ul li.more .dot:before, .wrapper header nav ul li.more .dot:after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #999;
+  border-radius: 50%;
+  position: absolute;
+  left: 10px;
+}
+
+.wrapper header nav ul li.more .dot:after {
+  left: 20px;
+}
+
+.wrapper header nav ul .userImg {
+  width: 30px;
+  height: 30px;
+  float: right;
+}
+
+.wrapper header nav ul .userImg img {
+  margin-top: 11px;
+}
+
+.wrapper header nav ul .seaRch {
+  min-width: 24%;
+  float: right;
+  margin-top: 1px;
+}
+
+.wrapper header nav ul .seaRch label {
+  background: #fbfbfb;
+  color: #999;
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+}
+
+.wrapper header nav ul .seaRch label i {
+  background: #999;
+}
+
+.wrapper header nav ul .seaRch label input {
+  min-width: 230px;
+  background: #fbfbfb;
+  border: none;
+  outline: none;
+}
+
+.wrapper .container {
+  width: 100%;
+  float: left;
+}
+
+.wrapper .container .ask_info {
+  width: 100%;
+}
+
+.wrapper .container .ask_info .info {
+  width: 100%;
+  background: #252525;
+  text-align: center;
+  padding: 30px;
+}
+
+.wrapper .container .ask_info .info li {
+  padding-top: 15px;
+}
+
+.wrapper .container .ask_info .info li button {
+  width: 10%;
+  height: 30px;
+  border-radius: 5px;
+  background: #DF3E7B;
+  outline: none;
+  border: none;
+}
+
+.wrapper .container .ask_info .info li button:hover {
+  opacity: .8;
+}
+
+.wrapper .container ul.learnmore {
+  width: 100%;
+  background: #333;
+}
+
+.wrapper .container ul.learnmore li {
+  width: 100%;
+  text-align: center;
+  padding: .8em 0 .8em 0;
+}
+
+.wrapper .container .ask_timely {
+  text-align: center;
+}
+
+.wrapper .container .ask_timely ul.timely {
+  width: 100%;
+  background: #fbfbfb;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.wrapper .container .ask_timely ul.timely li {
+  margin-left: 10px;
+  text-align: center;
+  padding: .8em 0 .8em 0;
+  display: inline-block;
+}
+
+.wrapper .container .ask_timely ul.timely li span {
+  margin-left: 5px;
+}
+
+.wrapper .container .ask_timely ul.timely .box {
+  width: 20px;
+  height: 20px;
+  background: #999;
+  float: right;
+  position: relative;
+  margin-top: 19px;
+  right: 15px;
+  top: -9px;
+}
+
+.wrapper .container .ask_timely ul.timely .box:hover .submenu {
+  display: block;
+}
+
+.wrapper .container .ask_timely ul.timely .box:before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #fbfbfb;
+  position: absolute;
+  top: 12px;
+  left: 0;
+}
+
+.wrapper .container .ask_timely ul.timely .box:after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #fbfbfb;
+  position: absolute;
+  top: 0;
+  left: 9px;
+}
+
+.wrapper .container .ask_timely ul.timely .menu-item .submenu {
+  width: 200px;
+  background-color: #333;
+  -webkit-transform: -90%, 22%;
+  -ms-transform: -90%, 22%;
+  transform: translate(-90%, 22%);
+  display: none;
+  position: absolute;
+  width: 220px;
+  margin-top: 0;
+}
+
+.wrapper .container .wrapper-inner {
+  width: 100%;
+  height: 100%;
+  padding: 30px 30px 20px 30px;
+  background: #fbfbfb;
+  border-top: 1px solid #ccc;
+}
+
+.wrapper .container .wrapper-inner .main-full {
+  max-width: 100%;
+  float: left;
+  padding: 5px;
+}
+
+.wrapper .container .wrapper-inner .main-full .team {
+  float: left;
+  max-width: 25%;
+  max-height: 30%;
+  padding: 5px 10px;
+}
+
+.wrapper .container .wrapper-inner .main-full .team .groupImg {
+  display: inline-block;
+  border: 1px solid #dedede;
+}
+
+.wrapper .container .wrapper-inner .main-full .team .groupImg img {
+  width: 100%;
+}
+
+.wrapper .container .wrapper-inner .main-full .team .groupImg .share {
+  width: 100%;
+}
+
+.wrapper .container .wrapper-inner .main-full .team .groupImg .share .td {
+  float: left;
+}
+
+.wrapper .container .wrapper-inner .main-full .team .groupImg .share .eml {
+  float: right;
+}
+
+.wrapper .container .wrapper-inner .main-full .team .author {
+  width: 100%;
+}
+
+.wrapper .container .wrapper-inner .main-full .team .author::img {
+  border-radius: 50%;
+}
+
+.wrapper .container .btnall .infinite {
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.wrapper .container .btnall .infinite .signup {
+  width: 100%;
+  display: inline-block;
+  background: #ea4c89;
+  padding: 10px;
+  border-radius: 4px;
+  color: #fbfbfb;
+}
+
+.wrapper .container .btnall .infinite .signup:hover {
+  background: #DF3E7B;
+}
+
+.wrapper .container .btnall .infinite .signin {
+  line-height: 40px;
+  display: block;
+  border-radius: 4px;
+  color: rgba(125, 177, 211, 0.863);
+}
+
+.wrapper .container .btnall .infinite .signin:hover {
+  background: rgba(250, 247, 247, 0.863);
+  color: #1E78B6;
+  top: 50px;
+}
+
+.wrapper .container .back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 0;
+  float: right;
+  z-index: 99;
+}
+
+.wrapper .container .back-to-top a {
+  color: #9a9a9a;
+}
+
+.wrapper .container .back-to-top a:hover {
+  color: #2b2b2b;
+}
+
+.wrapper .foot {
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid #E5E5E5;
+}
+
+.wrapper .foot p {
+  max-width: 30%;
+}
+
+@media screen and (min-width: 767px) and (max-width: 905px) {
+  .wrapper .menu {
+    position: fixed;
+    display: block;
+    z-index: 99999;
+    margin: 0 auto;
+  }
+  .wrapper header {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+  }
+  .wrapper header .logo {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    float: none;
+    line-height: 75px;
+  }
+  .wrapper header .logo img {
+    width: 100%;
+    margin-top: 0px;
+  }
+  .wrapper header nav {
+    width: 100%;
+    display: none;
+  }
+  .wrapper .container {
+    width: 100%;
+    padding-top: 30px;
+  }
+  .wrapper .container .ask_info {
+    width: 100%;
+  }
+  .wrapper .container .ask_info .info {
+    width: 100%;
+  }
+  .wrapper .container .ask_info .info li {
+    padding-top: 15px;
+  }
+  .wrapper .container .ask_info .info li button {
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    background: #DF3E7B;
+    outline: none;
+    border: none;
+  }
+  .wrapper .container .ask_info .info li button:hover {
+    opacity: .8;
+  }
+  .wrapper .container .wrapper-inner {
+    max-width: 100%;
+  }
+  .wrapper .container .wrapper-inner .main-full {
+    max-width: 100%;
+  }
+  .wrapper .container .wrapper-inner .main-full .team {
+    max-width: 33.33333333%;
+  }
+}
+
+@media only screen and (max-width: 766px) {
+  .wrapper .menu {
+    position: fixed;
+    display: block;
+    z-index: 99999;
+    margin: 0 auto;
+  }
+  .wrapper header {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+  }
+  .wrapper header .logo {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    float: none;
+  }
+  .wrapper header .logo img {
+    width: 100%;
+  }
+  .wrapper header nav {
+    width: 100%;
+    display: none;
+  }
+  .wrapper .container {
+    width: 100%;
+    padding-top: 30px;
+  }
+  .wrapper .container .ask_info {
+    width: 100%;
+  }
+  .wrapper .container .ask_info .info {
+    width: 100%;
+  }
+  .wrapper .container .ask_info .info li {
+    padding-top: 15px;
+  }
+  .wrapper .container .ask_info .info li button {
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    background: #DF3E7B;
+    outline: none;
+    border: none;
+  }
+  .wrapper .container .ask_info .info li button:hover {
+    opacity: .8;
+  }
+  .wrapper .container .wrapper-inner {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .wrapper .container .wrapper-inner .main-full {
+    width: 100%;
+  }
+  .wrapper .container .wrapper-inner .main-full .team {
+    max-width: 50%;
+  }
+}
+
+@media only screen and (max-width: 714px) {
+  .wrapper {
+    width: 100%;
+  }
+  .wrapper header .logo {
+    max-width: 15%;
+    height: 100%;
+    line-height: 80px;
+  }
+  .wrapper header .logo img {
+    width: 100%;
+    height: 75%;
+  }
+  .wrapper header nav {
+    display: none;
+  }
+  .wrapper .container .ask_info .info li {
+    padding-top: 15px;
+  }
+  .wrapper .container .ask_info .info li button {
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    background: #DF3E7B;
+    outline: none;
+    border: none;
+  }
+  .wrapper .container .ask_info .info li button:hover {
+    opacity: .8;
+  }
+  .wrapper .container .wrapper-inner {
+    width: 100%;
+  }
+  .wrapper .container .wrapper-inner .main-full {
+    width: 100%;
+  }
+  .wrapper .container .wrapper-inner .main-full .team {
+    max-width: 50%;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .wrapper {
+    width: 100%;
+  }
+  .wrapper header .logo {
+    max-width: 15%;
+    height: 100%;
+    line-height: 80px;
+  }
+  .wrapper header .logo img {
+    width: 100%;
+    height: 75%;
+  }
+  .wrapper header nav {
+    display: none;
+  }
+  .wrapper .container .ask_info .info li {
+    padding-top: 15px;
+  }
+  .wrapper .container .ask_info .info li button {
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    background: #DF3E7B;
+    outline: none;
+    border: none;
+  }
+  .wrapper .container .ask_info .info li button:hover {
+    opacity: .8;
+  }
+  .wrapper .container .wrapper-inner {
+    width: 110%;
+  }
+  .wrapper .container .wrapper-inner .main-full {
+    width: 110%;
+  }
+  .wrapper .container .wrapper-inner .main-full .team {
+    max-width: 110%;
+  }
+  .wrapper .container .wrapper-inner .main-full .team .groupImg {
+    width: 110%;
+  }
+  .wrapper .container .wrapper-inner .main-full .team .groupImg img {
+    width: 110%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .wrapper {
+    width: 100%;
+  }
+  .wrapper header .logo {
+    max-width: 15%;
+    height: 100%;
+    line-height: 80px;
+  }
+  .wrapper header .logo img {
+    width: 100%;
+    height: 75%;
+  }
+  .wrapper header nav {
+    display: none;
+  }
+  .wrapper .container .ask_info .info li {
+    padding-top: 15px;
+  }
+  .wrapper .container .ask_info .info li button {
+    width: 25%;
+    height: 30px;
+    border-radius: 5px;
+    background: #DF3E7B;
+    outline: none;
+    border: none;
+  }
+  .wrapper .container .ask_info .info li button:hover {
+    opacity: .8;
+  }
+  .wrapper .container .wrapper-inner {
+    width: 100%;
+  }
+  .wrapper .container .wrapper-inner .main-full {
+    width: 100%;
+  }
+  .wrapper .container .wrapper-inner .main-full .team {
+    max-width: 100%;
+  }
+  .wrapper .container .wrapper-inner .main-full .team .groupImg {
+    width: 100%;
+  }
+  .wrapper .container .wrapper-inner .main-full .team .groupImg img {
+    width: 100%;
+  }
+}
